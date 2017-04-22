@@ -1,7 +1,7 @@
 package projecteuler;
 
 /**
- * Reads in a pyramid of numbers from a text file and outputs the value of the
+ * Reads a pyramid of numbers from a text file and outputs the value of the
  * largest path.
  * @author Sean Brede
  */
@@ -12,11 +12,12 @@ import java.util.List;
 public class Euler067 {
     
     public static void main(String[] args) {      
-        String filename = JOptionPane.showInputDialog("Input filename of " +
+        String filename = JOptionPane.showInputDialog("Input filename of a " +
                 "text file containing a pyramid of numbers.");
         
         List<String> pyramidList = EulerHelpers.buildListFromFile(filename);
         
+        // create new array and fill it with numbers from text file
         int[][] pyramidArray = new int[pyramidList.size()][];
         for (int i = 0; i < pyramidList.size(); i++) {
             String[] splitLine = pyramidList.get(i).split("\\s");
@@ -28,15 +29,13 @@ public class Euler067 {
             }
         }
         
-        int max = pyramidArray[0][0];
+        int max = pyramidArray[0][0]; // initial max is top number
         
-        // iterate through each number in the array from left to right, top to
-        // bottom, adding the bigger of the two above it. 
+        // iterate, starting from second row, through each number in the array
+        // from left to right, top to bottom, adding the bigger of the two
         // above it
-        for (int y = 0; y < pyramidArray.length; y++) {           
+        for (int y = 1; y < pyramidArray.length; y++) {           
             for(int x = 0; x < pyramidArray[y].length; x++) {
-                
-                if(y == 0 && x == 0) continue;
                 
                 if(x != 0 && x != pyramidArray[y].length - 1)
                 {
