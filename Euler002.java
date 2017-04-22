@@ -16,9 +16,7 @@ public class Euler002 {
         
         while(fib <= 4000000) {
             
-            if(fib % 2 == 0) {
-                sum += fib;            
-            }
+            if(fib % 2 == 0) sum += fib;
             
             // no "swap values with two variables" trick here, folks
             hold = fib;

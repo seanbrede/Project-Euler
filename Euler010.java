@@ -12,13 +12,12 @@ public class Euler010 {
         long sum = 2;
         
         primeloop:
-        for(int i = 3; i < 2000000; i += 2) {
+        for(int number = 3; number < 2000000; number += 2) {
             
-            for(int check = 2; check <= Math.sqrt(i); check++) {
-                if(i % check == 0) continue primeloop;
-            }
+            for(int rootcheck = 2; rootcheck <= Math.sqrt(number); rootcheck++)              
+                if(number % rootcheck == 0) continue primeloop;
             
-            sum += i;
+            sum += number;
         }
         
         System.out.println("Sum is: " + sum);
