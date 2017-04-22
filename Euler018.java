@@ -1,13 +1,14 @@
-package euler;
-
-import javax.swing.JOptionPane;
-import java.util.List;
+package projecteuler;
 
 /**
  * Reads in a pyramid of numbers from a text file and outputs the value of the
  * largest path.
  * @author Sean Brede
  */
+
+import javax.swing.JOptionPane;
+import java.util.List;
+
 public class Euler018 {
     
     public static void main(String[] args) {      
