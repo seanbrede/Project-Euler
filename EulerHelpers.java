@@ -1,19 +1,20 @@
 package projecteuler;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-
 /**
  * 
  * @author Sean
  */
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class EulerHelpers {
     
     public static int[][] build2dArrayFromList(List<String> list) {
         
         // create array, split each line into single numbers, and add those
-        // numbers to it
+        // numbers to the array
         int[][] array = new int[list.size()][];
         
         for (int i = 0; i < list.size(); i++) {
@@ -26,6 +27,7 @@ public class EulerHelpers {
         return array;
     }
     
+    /*
     public static int[] buildArrayFromTextFile(String filename) {
         List<String> numbers = null;
         
@@ -45,6 +47,7 @@ public class EulerHelpers {
         
         return array;   
     }
+    */
     
     public static List<String> buildListFromFile(String filename) {
         List<String> numbers = null;
