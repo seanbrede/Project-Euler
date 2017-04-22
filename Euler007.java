@@ -1,6 +1,11 @@
 package projecteuler;
 
-public class Euler7 {
+/**
+ *
+ * @author Sean
+ */
+
+public class Euler007 {
     
     public static void main(String[] args) {
         

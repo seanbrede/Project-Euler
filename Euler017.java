@@ -1,13 +1,13 @@
-package euler;
+package projecteuler;
 
 /**
  * 
  * @author Sean
  */
+
 public class Euler017 {
     
     public static void main(String[] args) {
-        
         
     }
     
@@ -18,9 +18,11 @@ public class Euler017 {
         
         int sum = 0;
         
+        /*
         for(int i = first; i <= last; i++) {
             if(i/100 > 0)
         }
+        */
         
         return 1;
     }

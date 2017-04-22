@@ -1,8 +1,14 @@
 package projecteuler;
 
-public class Euler4 {
+/**
+ *
+ * @author Sean
+ */
+
+public class Euler004 {
     
     public static void main(String[] args) {
+        
         int one = 999;
         int two = 999;
         int possible;

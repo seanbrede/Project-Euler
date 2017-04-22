@@ -9,6 +9,7 @@ package projecteuler;
  *
  * @author Sean
  */
-public class Euler11 {
+
+public class Euler011 {
     
 }

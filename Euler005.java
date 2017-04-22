@@ -9,7 +9,7 @@ package projecteuler;
  *
  * @author Sean
  */
-public class Euler5 {
+public class Euler005 {
     
     public static void main(String[] args) {
         

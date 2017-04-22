@@ -1,6 +1,11 @@
 package projecteuler;
 
-public class Euler3 {
+/**
+ *
+ * @author Sean
+ */
+
+public class Euler003 {
     
     public static void main(String[] args) {
         long div = 600851475143L;
@@ -15,7 +20,7 @@ public class Euler3 {
             
         }
         
-        if(div > maxfactor) maxfactor = (int)div;
+        if(div > maxfactor) maxfactor = (int) div;
         
         System.out.println("Largest prime factor is: " + maxfactor);
     }

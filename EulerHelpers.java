@@ -1,4 +1,4 @@
-package euler;
+package projecteuler;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
