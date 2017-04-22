@@ -1,0 +1,1 @@
+I started doing these challenges as a way to practice my programming and logical thinking skills. I took a break for a while but came back to them after one renewed my interest.
