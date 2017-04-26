@@ -8,18 +8,21 @@ package projecteuler;
 public class Euler010 {
     
     public static void main(String[] args) {
-        
+     
         long sum = 2;
         
-        primeloop:
-        for(int number = 3; number < 2000000; number += 2) {
-            
-            for(int rootcheck = 2; rootcheck <= Math.sqrt(number); rootcheck++)              
-                if(number % rootcheck == 0) continue primeloop;
-            
-            sum += number;
+        for(int n = 3; n < 2000000; n += 2) {     
+            if(checkPrime(n)) continue;          
+            sum += n;
         }
         
         System.out.println("Sum is: " + sum);
+    }
+    
+    public static boolean checkPrime(int n) {
+        for(int i = 2; i <= Math.sqrt(n); i++)
+            if(n % i == 0) return false;
+        
+        return true;
     }
 }

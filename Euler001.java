@@ -13,8 +13,7 @@ public class Euler001 {
         
         // iterate through numbers, add number if it divides by 3 or 5
         for(int i = 0; i < 1000; i++)
-            if(i % 3 == 0 || i%5 == 0 )
-                sum += i;
+            if(i % 3 == 0 || i%5 == 0 ) sum += i;
         
         System.out.println("The sum of all multiple of 3 or 5 below " + 
             "1000 is: " + sum);
