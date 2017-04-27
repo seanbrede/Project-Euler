@@ -9,14 +9,9 @@ public class Euler017 {
     
     public static void main(String[] args) {
         
-        int sum = 0;
-        
-        for(int n = 1; n <= 1000; n++) {
+        int sum = 0;       
+        for(int n = 1; n <= 1000; n++)
             sum += findLetterSum(n);
-            
-            System.out.println(n + " - letter count: " + findLetterSum(n) +
-                " total: " + sum);
-        }
         
         System.out.println("The sum of letters in the words for the numbers 1"
             + " through 1000 is: " + sum);
