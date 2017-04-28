@@ -17,32 +17,26 @@ public class Euler017 {
             + " through 1000 is: " + sum);
     }
     
-    private static int findLetterSum(int number) {       
+    private static int findLetterSum(int number) {
+        
+        final String[] names19 = {"","one","two","three","four","five","six",
+                "seven","eight","nine","ten","eleven","twelve","thirteen",
+                "fourteen","fifteen","sixteen","seventeen","eighteen",
+                "nineteen"};
+        
+        final String[] names99 = {"","","twenty","thirty","forty","fifty",
+                "sixty","seventy","eighty","ninety"};
+        
         // if number is between 1 and 19 inclusive
-        if(number < 20) {
-            String[] names19 = {
-                "","one","two","three","four","five","six","seven", "eight",
-                "nine","ten","eleven","twelve","thirteen","fourteen","fifteen",
-                "sixteen","seventeen","eighteen","nineteen"
-            };
-               
-            return names19[number].length();
-        }
+        if(number < 20) return names19[number].length();
         
         // if number is between 20 and 99 inclusive
-        else if(number < 100) {
-            String[] names99 = {
-                "","","twenty","thirty","forty","fifty","sixty","seventy",
-                "eighty","ninety"
-            };
-            
+        else if(number < 100)
             return names99[number / 10].length() + findLetterSum(number % 10);
-        }
         
         // if number is between 100 and 999 inclusive
         else if(number < 1000) {
-            int sum = findLetterSum(number / 100) + "hundred".length();
-            
+            int sum = findLetterSum(number / 100) + "hundred".length();          
             if(number % 100 > 0) sum += "and".length();
             
             return sum + findLetterSum(number % 100);            
@@ -50,7 +44,5 @@ public class Euler017 {
         
         // if number is 1000 
         return "onethousand".length();
-        
-        // could extend this later to include more numbers
     }
 }

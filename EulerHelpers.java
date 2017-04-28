@@ -1,7 +1,7 @@
 package projecteuler;
 
-/**
- * 
+/*
+ * Contains helper functions required by certain solutions.
  * @author Sean
  */
 
@@ -26,28 +26,6 @@ public class EulerHelpers {
         
         return array;
     }
-    
-    /*
-    public static int[] buildArrayFromTextFile(String filename) {
-        List<String> numbers = null;
-        
-        // attempt to read file, catching exception and terminating program if
-        // unsuccessful
-        try {
-            numbers = Files.readAllLines(Paths.get(filename));
-        } catch(Exception e) {
-            System.out.println(e.toString());
-            System.exit(-1);
-        }
-        
-        // create array and add numbers to it
-        int[] array = new int[numbers.size()];       
-        for (int i = 0; i < numbers.size(); i++)
-            array[i] = Integer.parseInt(numbers.get(i));
-        
-        return array;   
-    }
-    */
     
     public static List<String> buildListFromFile(String filename) {
         List<String> numbers = null;

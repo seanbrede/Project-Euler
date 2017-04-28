@@ -9,8 +9,8 @@ public class Euler006 {
     
     public static void main(String[] args) {
         
-        long numberOne = 0;
-        long numberTwo = 0;
+        long numberOne = 0,
+             numberTwo = 0;
         
         for(int i = 1; i <= 100; i++) {
             numberOne += i;
