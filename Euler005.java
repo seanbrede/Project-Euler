@@ -9,22 +9,16 @@ public class Euler005 {
     
     public static void main(String[] args) {
         
-        int number = 0;
+        int lcm = 2;
+        int sum = 2;
         
-        numberloop:
-        while(true) {
-            number += 20;
+        for(int number = 3; number <= 20; number++) {
             
-            for(int factor = 2; factor <= 20; factor++) {
-                if(number % factor != 0) {
-                    System.out.println(factor);
-                    continue numberloop;
-                }
-            }
+            while(sum % number != 0) sum += lcm;         
             
-            break;
+            lcm = sum;
         }
-        
-        System.out.println( "Lowest multiple is: " + number);
+
+    System.out.println( "Lowest multiple is: " + lcm);
     }
 }
