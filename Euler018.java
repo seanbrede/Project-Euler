@@ -2,7 +2,7 @@ package projecteuler;
 
 /*
  * Reads a pyramid of numbers from a text file and outputs the value of the
- * largest path.
+ * largest path through.
  * @author Sean Brede
  */
 
@@ -42,6 +42,6 @@ public class Euler018 {
             }
         }
         
-        System.out.println("The value of the largest path is: " + max);
+        System.out.println("The value of the largest path through is: " + max);
     }
 }
