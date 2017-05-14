@@ -6,28 +6,15 @@ package projecteuler;
  * @author Sean Brede
  */
 
-import javax.swing.JOptionPane;
 import java.util.List;
 
 public class Euler067 {
     
-    public static void main(String[] args) {      
-        String filename = JOptionPane.showInputDialog("Input filename of a " +
-                "text file containing a pyramid of numbers.");
+    public static void main(String[] args) {
         
-        List<String> pyramidList = EulerHelpers.buildListFromFile(filename);
-        
-        // create new array and fill it with numbers from text file
-        int[][] pyramidArray = new int[pyramidList.size()][];
-        for (int i = 0; i < pyramidList.size(); i++) {
-            String[] splitLine = pyramidList.get(i).split("\\s");
-
-            pyramidArray[i] = new int[splitLine.length];
-            
-            for (int j = 0; j < splitLine.length; j++) {
-                pyramidArray[i][j] = Integer.parseInt(splitLine[j]);
-            }
-        }
+        List<String> pyramidList =
+            EulerHelpers.buildListFromFile("Euler067.txt");
+        int[][] pyramidArray = EulerHelpers.build2dArrayFromList(pyramidList);
         
         int max = pyramidArray[0][0]; // initial max is top number
         

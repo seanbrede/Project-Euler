@@ -1,7 +1,8 @@
 package projecteuler;
 
-/*
- * Contains helper functions required by certain solutions.
+/**
+ * Contains helper functions that assist in processing the data for some
+ * problems.
  * @author Sean
  */
 
@@ -13,12 +14,11 @@ public class EulerHelpers {
     
     public static int[][] build2dArrayFromList(List<String> list) {
         
-        // create array, split each line into single numbers, and add those
-        // numbers to the array
         int[][] array = new int[list.size()][];
-        
+        // split each line into single numbers and add them to the array
         for (int i = 0; i < list.size(); i++) {
             String[] splitLine = list.get(i).split("\\s");
+            
             array[i] = new int[splitLine.length];          
             for (int j = 0; j < splitLine.length; j++)
                 array[i][j] = Integer.parseInt(splitLine[j]);
@@ -28,17 +28,18 @@ public class EulerHelpers {
     }
     
     public static List<String> buildListFromFile(String filename) {
-        List<String> numbers = null;
         
-        // attempt to read file, catching exception and terminating program if
-        // unsuccessful
+        filename = "C:\\Users\\Sean\\Documents\\NetBeansProjects\\Euler\\src\\"
+            + "projecteuler\\" + filename;
+        
+        List<String> list = null;
         try {
-            numbers = Files.readAllLines(Paths.get(filename));
-        } catch(Exception e) {
-            System.out.println(e.toString());
+            list = Files.readAllLines(Paths.get(filename));
+        } catch(Exception e) { // terminate program if cannot find file
+            System.err.println(e.toString());
             System.exit(-1);
         }
         
-        return numbers;
+        return list;
     }
 }

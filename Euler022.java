@@ -6,6 +6,7 @@ package projecteuler;
  */
 
 import java.util.List;
+import java.util.Arrays;
 
 public class Euler022 {
     
@@ -16,10 +17,20 @@ public class Euler022 {
             "Euler022.txt");
         
         String names = list.get(0).replace("\",\""," ");
-        names = names.replace("\"","");
-                
-        //System.out.println(derp);
+        names = names.replace("\"","");        
+        String[] splitNames = names.split("\\s"); // by this point, names are
+                                                  // all alone in an array
+        Arrays.sort(splitNames);
         
-        //String[] splitLine = list.get(0).split("\\s");
+        int sum = 0;
+        for(int i = 0; i < splitNames.length; i++) {
+            int lineSum = 0;
+            for(int j = 0; j < splitNames[i].length(); j++)
+                lineSum += (int)splitNames[i].charAt(j) - 64;
+            
+            sum += lineSum * (i + 1);
+        }
+        
+        System.out.println(sum);
     }
 }
